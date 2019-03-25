@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        function checkCode() {
+            var time = new Date().getTime();//防止缓存造成不能刷新不了
+            document.getElementById("imgCode").src="http://localhost:8088/code/defaultKaptcha?d="+ time;
+        }
+    </script>
+</head>
+<body>
+<form action="http://localhost:8088/code/loginCode" method="post">
+   验证码： <input type="text" name="checkCode"/>
+        <img alt="验证码" id="imgCode" src="http://localhost:8088/code/defaultKaptcha">
+        <a href="javascript:checkCode()">看不清楚</a>
+    <input type="submit" value="提交"/>
+</form>
+
+</body>
+</html>

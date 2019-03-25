@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ordine>
+	<stato_ordine/>
+	<metodo_di_pagamento>Bonifico</metodo_di_pagamento>
+	<dati_di_base>
+		<numero_ordine></numero_ordine>
+		<data_ordine></data_ordine>
+		<ora_ordine></ora_ordine>
+	</dati_di_base>
+	<fatturazione>
+		<nome>Chao</nome>
+		<cognome>Liu</cognome>
+		<ragione_sociale/>
+		<indirizzo>Via Michelangelo Buonarotti</indirizzo>
+		<localita>Segrate</localita>
+		<provincia>BS</provincia>
+		<cap>20090</cap>
+		<nazione>IT</nazione>
+		<codice_fiscale_partita_iva/>
+		<valuta>EUR</valuta>
+		<e-mail>c.liu@genertecitalia.it</e-mail>
+		<telefono>+39022133772</telefono>
+	</fatturazione>
+	<destinazione>
+		<nome>Chao</nome>
+		<cognome>Liu</cognome>
+		<ragione_sociale/>
+		<indirizzo>Via Michelangelo Buonarotti</indirizzo>
+		<localita>Segrate</localita>
+		<provincia>BS</provincia>
+		<cap>20090</cap>
+		<nazione>IT</nazione>
+		<codice_fiscale_partita_iva/>
+		<valuta>EUR</valuta>
+		<e-mail>c.liu@genertecitalia.it</e-mail>
+		<telefono>+39022133772</telefono>
+	</destinazione>
+	<articoli>
+		<item1>
+			<codice_articolo></codice_articolo>
+			<quantita>1.0000</quantita>
+			<prezzo_unitario></prezzo_unitario>
+			<sconto>0.0000</sconto>
+			<imponibile></imponibile>
+			<iva>0.0000</iva>
+			<valore_totale></valore_totale>
+		</item1>
+	</articoli>
+	<spese_di_spedizione/>
+	<totale_ordine/>
+</ordine>

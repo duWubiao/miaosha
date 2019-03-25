@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.miaoshaproject.dao.OrderDoMapper" >
+  <resultMap id="BaseResultMap" type="com.miaoshaproject.dataObject.OrderDo" >
+    <result column="id" property="id" jdbcType="VARCHAR" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="item_id" property="itemId" jdbcType="INTEGER" />
+    <result column="promo_id" property="promoId" jdbcType="INTEGER" />
+    <result column="item_price" property="itemPrice" jdbcType="DECIMAL" />
+    <result column="amount" property="amount" jdbcType="INTEGER" />
+    <result column="order_price" property="orderPrice" jdbcType="DECIMAL" />
+  </resultMap>
+  <insert id="insert" parameterType="com.miaoshaproject.dataObject.OrderDo" >
+    insert into orderinfo (id, user_id, item_id, promo_id,
+      item_price, amount, order_price
+      )
+    values (#{id,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER}, #{itemId,jdbcType=INTEGER}, #{promoId,jdbcType=INTEGER},
+      #{itemPrice,jdbcType=DECIMAL}, #{amount,jdbcType=INTEGER}, #{orderPrice,jdbcType=DECIMAL}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.miaoshaproject.dataObject.OrderDo" >
+    insert into orderinfo
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="itemId != null" >
+        item_id,
+      </if>
+      <if test="promoId != null" >
+        promo_id,
+      </if>
+      <if test="itemPrice != null" >
+        item_price,
+      </if>
+      <if test="amount != null" >
+        amount,
+      </if>
+      <if test="orderPrice != null" >
+        order_price,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="itemId != null" >
+        #{itemId,jdbcType=INTEGER},
+      </if>
+      <if test="promoId != null" >
+        #{promoId,jdbcType=INTEGER},
+      </if>
+      <if test="itemPrice != null" >
+        #{itemPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="amount != null" >
+        #{amount,jdbcType=INTEGER},
+      </if>
+      <if test="orderPrice != null" >
+        #{orderPrice,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+</mapper>
